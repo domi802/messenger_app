@@ -1,4 +1,7 @@
+// ignore_for_file: no_leading_underscores_for_local_identifiers
+
 import 'package:flutter/material.dart';
+import 'package:messenger_app/auth/authh_service.dart';
 import 'package:messenger_app/components/my_button.dart';
 import 'package:messenger_app/components/my_textfield.dart';
 
@@ -13,7 +16,35 @@ class RegisterPage extends StatelessWidget {
 
   //register
 
-  void register() {}
+  void register(BuildContext context) async {
+    //get auth service
+    final _auth = AuthService();
+    //pass match => create user
+    if (_passController.text == _confirmController.text) {
+      try {
+        await _auth.signUpWithEmailPassword(
+          _emailController.text,
+          _passController.text,
+        );
+      } catch (e) {
+        showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            title: Text(e.toString()),
+          ),
+        );
+      }
+    }
+    // pass dont match -> show error to user
+    else {
+      showDialog(
+        context: context,
+        builder: (context) => const AlertDialog(
+          title: Text("Password dont match !"),
+        ),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +100,7 @@ class RegisterPage extends StatelessWidget {
             //login button
             MyButton(
               text: "Register",
-              onTap: register,
+              onTap: () => register(context),
             ),
             const SizedBox(height: 25),
 

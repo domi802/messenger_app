@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "686052647589",
+    "project_id": "meseapp-6e92e",
+    "storage_bucket": "meseapp-6e92e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686052647589:android:c6e954f8c94701ff7e234c",
+        "android_client_info": {
+          "package_name": "com.example.messenger_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0UO7s8wMVxGIJ_pDXH-hPZFbzSDKP7k0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
