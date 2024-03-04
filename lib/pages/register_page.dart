@@ -1,7 +1,7 @@
 // ignore_for_file: no_leading_underscores_for_local_identifiers, use_build_context_synchronously
 
 import 'package:flutter/material.dart';
-import 'package:messenger_app/auth/authh_service.dart';
+import 'package:messenger_app/services/auth/authh_service.dart';
 import 'package:messenger_app/components/my_button.dart';
 import 'package:messenger_app/components/my_textfield.dart';
 
